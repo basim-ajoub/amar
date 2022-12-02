@@ -183,6 +183,9 @@
         aspect-ratio: 3/1;
         object-fit: cover;
         object-position: center;
+        @include breakpoint(medium down) {
+          aspect-ratio: 4/1;
+        }
       }
     }
 
@@ -195,6 +198,13 @@
 
     .services-discrption {
       display: none;
+      margin-top: -1.5rem;
+    }
+    .inside-services-title{
+      display: none;
+      padding-top: 4rem;
+      margin-top: 4rem;
+      text-align: center;
     }
   }
   @include breakpoint(medium down) {
@@ -209,6 +219,7 @@
   background-repeat: no-repeat;
   border: 2px solid $sky-blue;
   color: $white;
+  height: 18rem !important;
 
   .services-bg-transparency {
     background-color: rgba(42, 44, 51, 0.7);
@@ -221,8 +232,7 @@
   }
 
   .services-title {
-    margin-top: 35%;
-    z-index: 2;
+   display: none;
   }
 
   .services-img-box {
@@ -239,7 +249,11 @@
     }
 
   }
+.inside-services-title{
+  display: block;
+  z-index: 2;
 
+}
   .services-discrption {
     display: block;
     z-index: 2;
@@ -416,7 +430,13 @@ p{
       i{
         margin-right: 0.5rem;
       }
-      a{
+      .contact-text{
+        color: white;
+        &:hover{
+          color: $dark-blue;
+        }
+      }
+      .social-icon{
         font-size:2rem;
         background: white;
         margin-right: 1rem;
@@ -438,7 +458,7 @@ p{
       padding-left: 1.5rem;
       margin-top: 0.5rem;
 
-      a {
+      .social-icon {
         &:hover {
           background: $dark-blue;
           i{
@@ -475,6 +495,7 @@ p{
         }
         .contact-phone{
           order: 2;
+          margin-top: 1rem;
         }
         .contact-email{
           order: 3;

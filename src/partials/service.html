@@ -3,10 +3,14 @@
     <div class="callout {{this.servBackground}} grid-x" data-equalizer-watch>
         <div class="services-bg-transparency"></div>
         <figure class="cell large-12 services-img-box">
-            <img class="project-img" src="../assets/img/{{this.servImg}}" alt="services-img">
+            <img class="project-img" src="./assets/img/{{this.servImg}}" alt="services-img">
         </figure>
         <h4 class="cell large-12 services-title">{{ this.serName }}</h4>
-        <p class="cell large-12 services-discrption">{{this.servDesc}}</p>
+        <div class="grid-x inside-box">
+            <h4 class="cell large-12 inside-services-title ">{{ this.serName }}</h4>
+            <p class="cell large-12 services-discrption">{{this.servDesc}}</p>
+        </div>
+
     </div>
 </div>
 {{/each}}
